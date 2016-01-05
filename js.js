@@ -9,9 +9,9 @@ var aListener = new Hammer(aButton);
 var bListener = new Hammer(bButton);
 var cListener = new Hammer(cButton);
 
-var aChord = new Audio('1.mp3');
-var bChord = new Audio('2.mp3');
-var cChord = new Audio('3.mp3');
+var aChord = new Audio('chords/1.mp3');
+var bChord = new Audio('chords/2.mp3');
+var cChord = new Audio('chords/3.mp3');
 
 var currentChord = aChord;
 
