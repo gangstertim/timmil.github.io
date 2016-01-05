@@ -1,3 +1,13 @@
+.chord {
+  background: blue;
+  height: 100px;
+  display: inline-block;
+  width: 100px;
+  border-radius: 100px;
+  text-align: center;
+  font: 30px/300px Helvetica, Arial, sans-serif;
+}
+
 #myElement {
   background: silver;
   height: 300px;
