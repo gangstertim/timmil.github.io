@@ -15,14 +15,17 @@ var cChord = new Audio('chords/3.wav');
 
 var currentChord = aChord;
 
-
+strings.addEventListener('touchmove', function() {
+  currentChord.play();
+});
 // listen to events...
+/*
 mc.on("panleft panright", function(e) {
     strings.textContent = e.type +" gesture detected.";
     currentChord.pause();
     currentChord.currentTime = 0;
     currentChord.play();
-});
+});*/
 
 mc.on("tap press", function(e) {
    strings.textContent = e.type;
