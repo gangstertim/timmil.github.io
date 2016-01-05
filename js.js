@@ -8,6 +8,7 @@ var ebChord = new Audio('Eb.mp3');
 // listen to events...
 mc.on("panleft panright tap press", function(ev) {
     myElement.textContent = ev.type +" gesture detected.";
-    cChord.stop();
+    cChord.pause();
+    cChord.currentTime = 0;
     cChord.play();
 });
