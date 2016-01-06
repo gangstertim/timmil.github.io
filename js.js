@@ -1,4 +1,4 @@
-var start = document.getElementbyId('start');
+var start = document.getElementById('start');
 var strings = document.getElementById('myElement');
 var aButton = document.getElementById('a');
 var bButton = document.getElementById('b');
