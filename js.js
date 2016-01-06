@@ -22,8 +22,6 @@ start.addEventListener('click', function() {
 
 mc.on("panleft panright", function(e) {
     strings.textContent = e.type +" gesture detected.";
-    currentChord.pause();
-    currentChord.currentTime = 0;
     currentChord.play();
 });
 
