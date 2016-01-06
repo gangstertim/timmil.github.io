@@ -1,19 +1,24 @@
+var start = document.getElementbyId('start');
 var strings = document.getElementById('myElement');
 var aButton = document.getElementById('a');
 var bButton = document.getElementById('b');
 var cButton = document.getElementById('c');
+var aChord = document.getElementById('aChord');
+var bChord = document.getElementById('bChord');
+var cChord = document.getElementById('cChord');
 
 // by default, it only adds horizontal recognizers
 var mc = new Hammer(strings);
-var currentChord, aChord, bChord, cChord;
+var currentChord;
 var aListener = new Hammer(aButton);
 var bListener = new Hammer(bButton);
 var cListener = new Hammer(cButton);
 
-//strings.addEventListener('touchmove', function() {
-//  currentChord.play();
-//});
-// listen to events...
+start.addEventListener('click', function() {
+  aChord.play();
+  bChord.play();
+  cChord.play();
+});
 
 mc.on("panleft panright", function(e) {
     strings.textContent = e.type +" gesture detected.";
@@ -29,22 +34,13 @@ mc.on("tap press", function(e) {
 });
 
 aListener.on("tap press", function(e) {
-   if (!aChord) {
-     aChord =  new Audio('chords/1.wav');
-   }
    currentChord = aChord;
 });
 
 bListener.on("tap press", function(e) {
-   if (!bChord) {
-     bChord =  new Audio('chords/2.wav');
-   }
    currentChord = bChord;
 });
 
 cListener.on("tap press", function(e) {
-  if (!cChord) {
-    cChord =  new Audio('chords/3.wav');
-  }
   currentChord = cChord;
 });
